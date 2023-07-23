@@ -1,29 +1,30 @@
-type Headings = {
-    heading: string
-    subheading: string
+type Hero = {
+    heading?: String
+    subheading?: String
 }
-type Introduction = {
-    introductionHeading: string
-    introductionBody: string
-}
-type WorkExperience = {
-    pageLinkLabel: string
-    pageLink: string
-}
-export type HeroContent = Headings & Introduction & WorkExperience
-export type PostsContent = Headings & { viewAllBtn: string } 
-export type ProjectsContent = Headings & { viewAllBtn: string }
 
-type Post = {
-    title: string
-    description: string
-    createdAt: string
+export type PageProps = {
+    heroContent?: Hero
+    status?: string
 }
-export type Posts = Post[]
 
-type Project = {
-    title: string
-    description: string
-    completionDate: string
+type Media = {
+    mimeType?: string
+    alt?: string
+    filename?: string
+    filesize?: number
+    url?: string
+    width?: number
+    height?: number
 }
-export type Projects = Project[]
+
+type Platform = {
+    name?: string
+    link?: string
+    svg?: Media | string
+}
+
+export type Social = {
+    id?: string
+    platform?: Platform
+} 

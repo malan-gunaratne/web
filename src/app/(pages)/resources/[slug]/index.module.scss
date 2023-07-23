@@ -1,0 +1,32 @@
+.container {
+    max-width: var(--max-width);
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 120px;
+}
+
+.title {
+    font-size: 33px;
+    line-height: 33px;
+}
+
+.dates {
+    display: flex;
+    column-gap: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.description {
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+.link {
+    width: max-content;
+    margin: 30px 0;
+    padding: 5px 8px;
+    border: 1px solid white;
+    font-size: 14px;
+}

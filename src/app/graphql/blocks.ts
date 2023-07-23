@@ -1,49 +1,51 @@
-
-import {
-    PROJECTS
-} from './projects'
-
 export const HOME_PAGE = `
 ...on HomePage {
     blockType
-    hero {
+    heroContent {
         heading
         subheading
-        introductionHeading
-        introductionBody
-        pageLinkLabel
-        pageLink
     }
-    posts {
-        heading
-        subheading
-        viewAllBtn
-    }
-    featuredProjects {
-        heading
-        subheading
-        projects ${PROJECTS}
-        viewAllBtn
-    }
+    status
 }
 `
 
 export const PROJECTS_PAGE = `
 ...on ProjectsPage {
     blockType
-
+    heroContent {
+        heading
+        subheading
+    }
 }
 `
 
-export const POSTS_PAGE = `
-...on PostsPage {
+export const RESOURCES_PAGE = `
+...on ResourcesPage {
     blockType
-
+    heroContent {
+        heading
+        subheading
+    }
 }
 `
 
-export const EXPERIENCES_PAGE = `
-...on ExperiencesPage {
+export const WORK_EXPERIENCE_PAGE = `
+...on WorkExperiencePage {
     blockType
+    heroContent {
+        heading
+        subheading
+    }
+    experiences {
+        experience {
+            title
+            startDate
+            endDate
+            slug
+            skills {
+                title
+            }
+        }
+    }
 }
 `

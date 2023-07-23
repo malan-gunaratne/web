@@ -1,0 +1,54 @@
+.container {
+    max-width: var(--max-width);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero {
+    margin-top: 120px;
+    p:first-of-type {
+        font-size: 33px;
+        line-height: 32px;
+        white-space: pre-line;
+    }
+    p:last-child {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+.milestones {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .stack {
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        row-gap: 5px;
+
+        * {
+            border: 1px solid white;
+            padding: 5px;
+            font-size: 10px;
+        }
+    }
+}
+
+.dates {
+    font-size: 14px;
+}
+
+.link {
+    font-size: 18px;
+    font-weight: bold;
+}

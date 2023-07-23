@@ -13,11 +13,13 @@ export interface Config {
     pages: Page;
     experiences: Experience;
     projects: Project;
-    posts: Post;
-    topics: Topic;
-    stacks: Stack;
+    resources: Resource;
+    skills: Skill;
   };
-  globals: {};
+  globals: {
+    'main-menu': MainMenu;
+    socials: Social;
+  };
 }
 export interface User {
   id: string;
@@ -50,25 +52,11 @@ export interface Page {
   loadTemplate?: 'no' | 'yes';
   template?: (
     | {
-        hero?: {
+        heroContent?: {
           heading?: string;
           subheading?: string;
-          introductionHeading?: string;
-          introductionBody?: string;
-          pageLinkLabel?: string;
-          pageLink?: string | Page;
         };
-        posts?: {
-          heading?: string;
-          subheading?: string;
-          viewAllBtn?: string;
-        };
-        featuredProjects?: {
-          heading?: string;
-          subheading?: string;
-          projects?: string | Project;
-          viewAllBtn?: string;
-        };
+        status?: string;
         id?: string;
         blockName?: string;
         blockType: 'homePage';
@@ -78,37 +66,52 @@ export interface Page {
           heading?: string;
           subheading?: string;
         };
-        milestones?: {
-          experiences?: {
-            title: string;
-            dates: string;
-            experience: string | Experience;
-            descriptions?: {
-              heading: string;
-              body: string;
-              id?: string;
-            }[];
-            id?: string;
-          }[];
-        };
+        experiences?: {
+          experience: string | Experience;
+          id?: string;
+        }[];
         id?: string;
         blockName?: string;
-        blockType: 'experiencesPage';
+        blockType: 'workExperiencePage';
       }
     | {
-        title?: string;
+        heroContent?: {
+          heading?: string;
+          subheading?: string;
+        };
         id?: string;
         blockName?: string;
         blockType: 'projectsPage';
       }
     | {
-        title?: string;
+        heroContent?: {
+          heading?: string;
+          subheading?: string;
+        };
         id?: string;
         blockName?: string;
-        blockType: 'postsPage';
+        blockType: 'resourcesPage';
       }
   )[];
   slug?: string;
+  updatedAt: string;
+  createdAt: string;
+}
+export interface Experience {
+  id: string;
+  title?: string;
+  description?: string;
+  skills?: string[] | Skill[];
+  slug?: string;
+  startDate?: string;
+  endDate?: string;
+  updatedAt: string;
+  createdAt: string;
+}
+export interface Skill {
+  id: string;
+  title?: string;
+  description?: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -116,45 +119,47 @@ export interface Project {
   id: string;
   title?: string;
   description?: string;
-  featurePost?: string | Post;
-  stack?: string[] | Stack[];
+  skills?: string[] | Skill[];
   slug?: string;
   isComplete?: 'no' | 'yes';
   completionDate?: string;
   updatedAt: string;
   createdAt: string;
 }
-export interface Post {
+export interface Resource {
   id: string;
   title?: string;
   description?: string;
+  source?: {
+    title?: string;
+    link?: string;
+  };
   slug?: string;
-  topics?: string[] | Topic[];
   updatedAt: string;
   createdAt: string;
 }
-export interface Topic {
+export interface MainMenu {
   id: string;
-  title?: string;
-  updatedAt: string;
-  createdAt: string;
+  menuItems?: {
+    link: {
+      label: string;
+      page?: string | Page;
+    };
+    id?: string;
+  }[];
+  updatedAt?: string;
+  createdAt?: string;
 }
-export interface Stack {
+export interface Social {
   id: string;
-  icon: string | Media;
-  title?: string;
-  description?: string;
-  updatedAt: string;
-  createdAt: string;
-}
-export interface Experience {
-  id: string;
-  title?: string;
-  featurePost?: string | Post;
-  stack?: string[] | Stack[];
-  slug?: string;
-  startDate?: string;
-  endDate?: string;
-  updatedAt: string;
-  createdAt: string;
+  socials?: {
+    platform?: {
+      name?: string;
+      link?: string;
+      svg?: string | Media;
+    };
+    id?: string;
+  }[];
+  updatedAt?: string;
+  createdAt?: string;
 }

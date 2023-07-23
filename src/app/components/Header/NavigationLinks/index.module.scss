@@ -1,0 +1,36 @@
+.menu {
+    margin-top: 115px;
+    padding-right: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.menu > a {
+    position: relative;
+    font-size: 25px;
+    color: white;
+}
+
+@media screen and (min-width: 350px) {
+    .menu > a {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .menu {
+        flex-direction: row;
+        column-gap: 1.4em;
+        margin-top: 0;
+    }
+
+    .menu > a {
+        font-size: 16px;
+    }
+
+    .menu > a:first-of-type {
+        display: none;
+    }
+}

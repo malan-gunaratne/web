@@ -1,0 +1,39 @@
+.container {
+    max-width: var(--max-width);
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 120px;
+
+
+    h1 {
+        font-size: 33px;
+        line-height: 32px;
+        font-weight: normal;
+    }
+    h3 {
+        font-size: 14px;
+        margin-top: 4px;
+        font-weight: normal;
+    }
+}
+
+.skills {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+
+    * {
+        border: 1px solid white;
+        padding: 5px;
+        font-size: 10px; 
+    }
+}
+
+.description {
+    margin-top: 40px;
+    white-space: pre-line;
+    font-size: 14px;
+}

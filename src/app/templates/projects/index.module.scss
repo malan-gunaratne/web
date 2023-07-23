@@ -1,0 +1,36 @@
+.container {
+    max-width: var(--max-width);
+    padding: 10px;
+    margin: 0 auto;
+    color: white;
+}
+
+.hero {
+    margin-top: 120px;
+    p:first-of-type {
+        font-size: 33px;
+        line-height: 32px;
+        white-space: pre-line;
+    }
+    p:last-child {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+.projects {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dates {
+    font-size: 14px;
+    align-self: center;
+}

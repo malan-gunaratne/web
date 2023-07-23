@@ -1,10 +1,4 @@
+import PageTemplate from './(pages)/[...slug]/page'
 
-export const Page = () => {
-    return (
-        <main>
-        </main>
-    )
-}
-
-export default Page
+export default PageTemplate
 

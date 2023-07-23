@@ -1,0 +1,46 @@
+.container {
+    max-width: var(--max-width);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero {
+    margin-top: 120px;
+    p:first-of-type {
+        font-size: 33px;
+        line-height: 32px;
+        white-space: pre-line;
+    }
+    p:last-child {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+.socials {
+    display: flex;
+    column-gap: 18px;
+    margin: 20px 0;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.status {
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    z-index: -1;
+}
+
+@media screen and (min-width: 480px) {
+    .status {
+        position: relative;
+        margin-top: 100px;
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,9 @@
+.arrow {
+    margin-left: 5px;
+    transition: transform 50ms linear;
+}
+
+.hovered {
+    transform: translate(2px, -2px);
+}    
+

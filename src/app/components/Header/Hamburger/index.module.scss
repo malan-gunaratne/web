@@ -1,0 +1,47 @@
+
+.hamburger {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+
+@media (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+}
+.toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    width: 36px;
+    height: 36px;
+    margin: 10px 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.line1 {
+    height: 2px;
+    width: 22px;
+    background-color: white;
+    transition: transform .15s ease;
+    transform: translateY(5px) rotate(0deg);
+}
+.line2 {
+    height: 2px;
+    width: 22px;
+    background-color: white;
+    transition: transform .15s ease;
+    transform: translateY(-5px) rotate(0deg);
+}
+.line1__open {
+    transform: translateY(2px) rotate(-45deg);
+}
+.line2__open{
+    transform: translatey(0) rotate(45deg);
+}

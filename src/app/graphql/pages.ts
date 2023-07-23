@@ -1,7 +1,7 @@
 import {
     HOME_PAGE,
-    POSTS_PAGE,
-    EXPERIENCES_PAGE,
+    RESOURCES_PAGE,
+    WORK_EXPERIENCE_PAGE,
     PROJECTS_PAGE,
 } from './blocks'
 
@@ -24,9 +24,9 @@ export const PAGE = `
                 loadTemplate
                 template {
                     ${HOME_PAGE}
-                    ${EXPERIENCES_PAGE}
-                    ${POSTS_PAGE}
+                    ${WORK_EXPERIENCE_PAGE}
                     ${PROJECTS_PAGE}
+                    ${RESOURCES_PAGE}
                 }
             }
         }
