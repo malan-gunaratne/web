@@ -42,7 +42,7 @@ const Header: React.FC<Props> = (props) => {
                     <NavigationLinks menu={menu}/>
                     <div className={styles.contact}>
                             <Socials socials={socials.socials}/>
-                            <a href="#">contact@malandev.com</a>
+                            <a href="mailto:contact@malandev.com">contact@malandev.com</a>
                     </div>
                 </div>
                 <div className={styles.menu__desktop}>

@@ -37,6 +37,7 @@ const Page: React.FC = async () => {
                         ))
                     }
                 </span>
+                <a href="mailto:contact@malandev.com">contact@malandev.com</a>
                 <p className={styles.status}>{status}</p>
             </main>
         )
