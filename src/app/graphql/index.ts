@@ -13,7 +13,7 @@ import { EXPERIENCE } from './experiences'
 import { GLOBALS, SOCIALS } from './globals'
 
 const next: { revalidate: number } = {
-    revalidate: 1
+    revalidate: 0
 }
 
 export const fetchPage = async (incomingSlugSegments?: string[]): Promise<Page | null> => {
