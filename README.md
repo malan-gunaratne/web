@@ -1,5 +1,7 @@
-Progress: In development
+FE repository for my personal website.
 
-Once complete, this will be the front-end application for my [personal website](https://malandev.com)
+This FE was built with React & TypeScript, using NextJS 13 using their new App Router. 
 
-The back-end application can be found [here](https://github.com/notmalan/cms)
+Data is pulled in from the BE which can be found [here](https://github.com/malan-gunaratne/cms)
+
+CMS contents are queried using GraphQL queries which are defined in the `src/app/graphql` folder.
